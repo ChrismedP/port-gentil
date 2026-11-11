@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact, rendez-vous et signalements — Mairie de Port-Gentil</title>
+  <meta name="description" content="Écrire aux services municipaux, prendre rendez-vous, signaler un problème ou demander un document à la Mairie de Port-Gentil.">
+  <meta name="theme-color" content="#0a1c36">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+  <link rel="stylesheet" href="assets/vendor/leaflet.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>!function(h){h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('anim');setTimeout(function(){if(!window.PG_READY)h.classList.remove('anim')},3000)}}(document.documentElement)</script>
+</head>
+<body data-page="contact" data-header="transparent">
+  <div class="curtain" aria-hidden="true"><svg class="curtain__logo" viewBox="0 0 64 64"><use href="#emblem"/></svg></div>
+  <div id="site-top"></div>
+
+  <main id="main">
+    <section class="page-hero page-hero--short" data-hero>
+      <div class="page-hero__media" data-hero-media><img src="assets/img/hotel-de-ville-drapeaux.webp" alt=""></div>
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane" data-hero-item><a href="index.html">Accueil</a><svg class="i"><use href="#i-chevron-right"/></svg><span aria-current="page">Contact</span></nav>
+        <span class="eyebrow eyebrow--light" data-hero-item>À votre écoute</span>
+        <h1 data-split style="margin-top:1rem">Comment pouvons-nous <em class="accent" style="color:var(--gold-300)">vous aider</em> ?</h1>
+      </div>
+    </section>
+
+    <!-- Urgences -->
+    <section class="section section--tight" id="urgences">
+      <div class="container">
+        <div class="section-head" style="margin-bottom:1.5rem">
+          <div class="section-head__text"><span class="eyebrow" style="color:var(--danger)" data-reveal>Urgences 24 h/24</span></div>
+        </div>
+        <div class="urgent-strip" id="urgent-strip" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- Formulaires -->
+    <section class="section section--alt" style="padding-top:calc(var(--section) * .7)">
+      <div class="container">
+        <div class="help-tabs" role="tablist" aria-label="Type de demande">
+          <button class="help-tab" role="tab" aria-selected="true" aria-controls="ecrire" data-tab="ecrire" data-reveal><svg class="i"><use href="#i-mail"/></svg><strong>Écrire aux services</strong><span>Question, réclamation, suggestion</span></button>
+          <button class="help-tab" role="tab" aria-selected="false" aria-controls="rendez-vous" data-tab="rendez-vous" data-reveal><svg class="i"><use href="#i-calendar"/></svg><strong>Prendre rendez-vous</strong><span>Guichets et permanences</span></button>
+          <button class="help-tab" role="tab" aria-selected="false" aria-controls="signaler" data-tab="signaler" data-reveal><svg class="i"><use href="#i-alert"/></svg><strong>Signaler un problème</strong><span>Voirie, éclairage, déchets</span></button>
+          <button class="help-tab" role="tab" aria-selected="false" aria-controls="demande" data-tab="demande" data-reveal><svg class="i"><use href="#i-file"/></svg><strong>Demander un document</strong><span>Actes et certificats en ligne</span></button>
+        </div>
+
+        <div class="contact-layout">
+          <div>
+            <!-- Écrire -->
+            <div class="help-panel form-card" id="ecrire" role="tabpanel">
+              <form data-form="Votre message a bien été transmis aux services municipaux." novalidate>
+                <h2 class="h3" style="margin-bottom:1.5rem">Écrire aux services municipaux</h2>
+                <div class="form-grid">
+                  <div class="field"><label for="c-nom">Nom et prénom *</label><input class="input" id="c-nom" required autocomplete="name" placeholder="Ex. Jean-Pierre Ondo"><span class="field__error">Merci d'indiquer votre nom.</span></div>
+                  <div class="field"><label for="c-mail">Adresse e-mail *</label><input class="input" id="c-mail" type="email" required autocomplete="email" placeholder="nom@exemple.ga"><span class="field__error">Adresse e-mail invalide.</span></div>
+                  <div class="field"><label for="c-tel">Téléphone</label><input class="input" id="c-tel" type="tel" autocomplete="tel" placeholder="+241 07 00 00 00"></div>
+                  <div class="field"><label for="c-svc">Service destinataire *</label><select class="select" id="c-svc" required><option value="">Choisir un service</option><option>Cabinet du Maire</option><option>État civil</option><option>Urbanisme & cadastre</option><option>Finances & marchés</option><option>Affaires sociales</option><option>Hygiène & salubrité</option><option>Jeunesse, culture & sports</option><option>Communication & presse</option></select><span class="field__error">Merci de choisir un service.</span></div>
+                  <div class="field full"><label for="c-obj">Objet *</label><input class="input" id="c-obj" required placeholder="L'objet de votre message"><span class="field__error">Merci d'indiquer un objet.</span></div>
+                  <div class="field full"><label for="c-msg">Votre message *</label><textarea class="textarea" id="c-msg" required minlength="20" placeholder="Précisez votre demande…"></textarea><span class="field__error">Votre message doit contenir au moins 20 caractères.</span></div>
+                  <div class="field full"><label class="check"><input type="checkbox" required><span>J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la <a href="mentions-legales.html#donnees" style="text-decoration:underline">politique de confidentialité</a>.</span></label><span class="field__error">Votre accord est nécessaire.</span></div>
+                </div>
+                <button class="btn btn--accent" style="margin-top:1.75rem" type="submit">Envoyer ma demande<svg class="i i--arrow"><use href="#i-send"/></svg></button>
+              </form>
+              <div class="form-success" hidden><div class="form-success__icon"><svg class="i"><use href="#i-check"/></svg></div><h3>Message envoyé !</h3><p>Vous recevrez une réponse sous 5 jours ouvrés. Conservez votre numéro :</p><span class="ref" data-ref></span></div>
+            </div>
+
+            <!-- Rendez-vous -->
+            <div class="help-panel form-card" id="rendez-vous" role="tabpanel" hidden>
+              <form data-form="Votre rendez-vous est confirmé. Un SMS de rappel vous sera envoyé." novalidate>
+                <h2 class="h3" style="margin-bottom:1.5rem">Prendre rendez-vous</h2>
+                <div class="form-grid">
+                  <div class="field"><label for="r-svc">Service *</label><select class="select" id="r-svc" required><option value="">Choisir</option><option>État civil — Hôtel de Ville</option><option>Urbanisme</option><option>Action sociale</option><option>Permanence d'un élu</option><option>Mairie d'arrondissement</option></select><span class="field__error">Merci de choisir un service.</span></div>
+                  <div class="field"><label for="r-date">Date souhaitée *</label><input class="input" id="r-date" type="date" required><span class="field__error">Merci de choisir une date.</span></div>
+                  <div class="field full"><span class="label">Créneau *</span><div class="slots" id="slots"></div></div>
+                  <div class="field"><label for="r-nom">Nom et prénom *</label><input class="input" id="r-nom" required autocomplete="name"><span class="field__error">Merci d'indiquer votre nom.</span></div>
+                  <div class="field"><label for="r-tel">Téléphone (pour le SMS) *</label><input class="input" id="r-tel" type="tel" required autocomplete="tel" placeholder="+241 07 00 00 00"><span class="field__error">Merci d'indiquer votre téléphone.</span></div>
+                  <div class="field full"><label for="r-motif">Motif du rendez-vous</label><input class="input" id="r-motif" placeholder="Ex. dépôt de dossier de mariage"></div>
+                </div>
+                <button class="btn btn--accent" style="margin-top:1.75rem" type="submit">Confirmer le rendez-vous<svg class="i i--arrow"><use href="#i-arrow-right"/></svg></button>
+              </form>
+              <div class="form-success" hidden><div class="form-success__icon"><svg class="i"><use href="#i-calendar"/></svg></div><h3>Rendez-vous confirmé</h3><p>Présentez ce numéro à l'accueil :</p><span class="ref" data-ref></span></div>
+            </div>
+
+            <!-- Signaler -->
+            <div class="help-panel form-card" id="signaler" role="tabpanel" hidden>
+              <form data-form="Merci ! Votre signalement a été transmis aux services techniques." novalidate>
+                <h2 class="h3" style="margin-bottom:1.5rem">Signaler un problème</h2>
+                <div class="field full" style="margin-bottom:1.25rem"><span class="label">Type de problème *</span>
+                  <div class="cat-pick">
+                    <label><input type="radio" name="sig" required><svg class="i"><use href="#i-route"/></svg>Voirie</label>
+                    <label><input type="radio" name="sig"><svg class="i"><use href="#i-lightbulb"/></svg>Éclairage</label>
+                    <label><input type="radio" name="sig"><svg class="i"><use href="#i-trash"/></svg>Déchets</label>
+                    <label><input type="radio" name="sig"><svg class="i"><use href="#i-droplet"/></svg>Inondation</label>
+                  </div>
+                  <span class="field__error">Merci de choisir un type.</span>
+                </div>
+                <div class="form-grid">
+                  <div class="field full"><label for="s-lieu">Localisation *</label><div class="geo"><input class="input" id="s-lieu" required placeholder="Adresse, quartier ou point de repère"><button class="btn btn--ghost btn--sm" type="button" id="geo-btn"><svg class="i"><use href="#i-map-pin"/></svg>Ma position</button></div><span class="field__error">Merci d'indiquer le lieu.</span></div>
+                  <div class="field full"><label for="s-desc">Description *</label><textarea class="textarea" id="s-desc" required minlength="10" placeholder="Décrivez le problème…" style="min-height:110px"></textarea><span class="field__error">Merci de décrire le problème.</span></div>
+                  <div class="field full"><label class="upload" for="s-photo"><svg class="i"><use href="#i-camera"/></svg><div><strong id="photo-name">Ajouter une photo</strong><span>JPG ou PNG, 10 Mo maximum</span></div><input id="s-photo" type="file" accept="image/*" capture="environment"></label></div>
+                  <div class="field"><label for="s-tel">Téléphone (facultatif)</label><input class="input" id="s-tel" type="tel" placeholder="Pour être tenu informé"></div>
+                </div>
+                <button class="btn btn--accent" style="margin-top:1.75rem" type="submit">Envoyer le signalement<svg class="i i--arrow"><use href="#i-send"/></svg></button>
+              </form>
+              <div class="form-success" hidden><div class="form-success__icon"><svg class="i"><use href="#i-check"/></svg></div><h3>Signalement enregistré</h3><p>Les services interviennent en moyenne sous 72 heures. Votre numéro de suivi :</p><span class="ref" data-ref></span></div>
+            </div>
+
+            <!-- Demande de document -->
+            <div class="help-panel form-card" id="demande" role="tabpanel" hidden>
+              <form data-form="Votre demande de document a bien été enregistrée." novalidate>
+                <h2 class="h3" style="margin-bottom:1.5rem">Demander un document</h2>
+                <div class="form-grid">
+                  <div class="field full"><label for="d-doc">Document demandé *</label><select class="select" id="d-doc" required></select><span class="field__error">Merci de choisir un document.</span></div>
+                  <div class="field"><label for="d-nom">Nom *</label><input class="input" id="d-nom" required autocomplete="family-name"><span class="field__error">Champ obligatoire.</span></div>
+                  <div class="field"><label for="d-prenom">Prénoms *</label><input class="input" id="d-prenom" required autocomplete="given-name"><span class="field__error">Champ obligatoire.</span></div>
+                  <div class="field"><label for="d-date">Date de naissance *</label><input class="input" id="d-date" type="date" required><span class="field__error">Champ obligatoire.</span></div>
+                  <div class="field"><label for="d-lieu">Lieu de naissance *</label><input class="input" id="d-lieu" required value="Port-Gentil"><span class="field__error">Champ obligatoire.</span></div>
+                  <div class="field"><label for="d-tel">Téléphone *</label><input class="input" id="d-tel" type="tel" required placeholder="+241 07 00 00 00"><span class="field__error">Champ obligatoire.</span></div>
+                  <div class="field"><label for="d-retrait">Retrait</label><select class="select" id="d-retrait"><option>Hôtel de Ville</option><option>Mairie du 1er arrondissement</option><option>Mairie du 2e arrondissement</option><option>Mairie du 3e arrondissement</option><option>Mairie du 4e arrondissement</option></select></div>
+                  <div class="field full"><label class="upload" for="d-id"><svg class="i"><use href="#i-file"/></svg><div><strong id="id-name">Joindre votre pièce d'identité</strong><span>PDF, JPG ou PNG</span></div><input id="d-id" type="file" accept="image/*,.pdf"></label></div>
+                </div>
+                <button class="btn btn--accent" style="margin-top:1.75rem" type="submit">Envoyer ma demande<svg class="i i--arrow"><use href="#i-arrow-right"/></svg></button>
+              </form>
+              <div class="form-success" hidden><div class="form-success__icon"><svg class="i"><use href="#i-check"/></svg></div><h3>Demande enregistrée</h3><p>Suivez votre dossier depuis la page <a class="link" href="services.html#en-ligne">Services en ligne</a> avec ce numéro :</p><span class="ref" data-ref></span></div>
+            </div>
+          </div>
+
+          <aside class="aside-sticky">
+            <div class="side-card side-card--navy" data-reveal>
+              <h3>Hôtel de Ville</h3>
+              <ul class="info-list">
+                <li><svg class="i"><use href="#i-map-pin"/></svg><span id="addr"></span></li>
+                <li><svg class="i"><use href="#i-phone"/></svg><a href="tel:+24111552024">+241 (0)11 55 20 24</a></li>
+                <li><svg class="i"><use href="#i-mail"/></svg><a href="mailto:contact@ville-portgentil.ga">contact@ville-portgentil.ga</a></li>
+                <li><svg class="i"><use href="#i-clock"/></svg><span>Lun – Ven : 7 h 30 – 15 h 30<br>Sam (état civil) : 8 h – 12 h</span></li>
+              </ul>
+            </div>
+            <div class="side-card" data-reveal>
+              <h3>Sans accès à Internet ?</h3>
+              <p style="font-size:.92rem;color:var(--text-soft)">Nos agents d'accueil vous accompagnent dans toutes vos démarches, à l'Hôtel de Ville et dans les quatre mairies d'arrondissement.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan -->
+    <section class="section" id="plan">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Plan d'accès</span>
+            <h2 class="h2" data-split>Venir à <em class="accent">l'Hôtel de Ville</em></h2>
+          </div>
+          <a class="btn btn--ghost" id="itin" href="https://www.google.com/maps/dir/?api=1&destination=-0.7175,8.7735" target="_blank" rel="noopener" data-reveal><svg class="i"><use href="#i-route"/></svg>Itinéraire</a>
+        </div>
+        <div class="split" style="align-items:stretch">
+          <div class="contact-map" id="contact-map" data-reveal></div>
+          <div>
+            <h3 class="h3" style="margin-bottom:1.25rem" data-reveal>Mairies d'arrondissement</h3>
+            <div class="annexes" id="annexes"></div>
+            <p class="note-provisoire"><svg class="i i--sm"><use href="#i-info"/></svg>Adresses et position exacte à confirmer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/vendor/leaflet.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/pages/contact.js"></script>
+  <script src="assets/js/anim.js"></script>
+</body>
+</html>

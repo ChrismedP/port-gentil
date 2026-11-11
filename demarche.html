@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fiche démarche — Mairie de Port-Gentil</title>
+  <meta name="description" content="Pièces à fournir, étapes, délais et lieu de dépôt : tout savoir sur votre démarche auprès de la Mairie de Port-Gentil.">
+  <meta name="theme-color" content="#0a1c36">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>!function(h){h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('anim');setTimeout(function(){if(!window.PG_READY)h.classList.remove('anim')},3000)}}(document.documentElement)</script>
+</head>
+<body data-page="services">
+  <div class="curtain" aria-hidden="true"><svg class="curtain__logo" viewBox="0 0 64 64"><use href="#emblem"/></svg></div>
+  <div id="site-top"></div>
+
+  <main id="main">
+    <header class="dem-hero" data-hero>
+      <div class="container">
+        <nav class="breadcrumb breadcrumb--dark" aria-label="Fil d'Ariane" data-hero-item>
+          <a href="index.html">Accueil</a><svg class="i"><use href="#i-chevron-right"/></svg><a href="services.html">Services</a><svg class="i"><use href="#i-chevron-right"/></svg><a href="services.html#catalogue" id="dem-cat-link">Catégorie</a>
+        </nav>
+        <div class="dem-hero__top">
+          <span class="dem-hero__icon" id="dem-icon" data-hero-item></span>
+          <div>
+            <div data-hero-item id="dem-tags"></div>
+            <h1 id="dem-title" data-split>Démarche</h1>
+            <p class="lead" id="dem-lead" data-hero-item></p>
+          </div>
+        </div>
+        <div class="facts" id="dem-facts" data-hero-item></div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container dem-layout">
+        <div>
+          <div class="dem-block" data-reveal>
+            <h2><svg class="i"><use href="#i-list"/></svg>Étapes de la procédure</h2>
+            <div class="steps" id="dem-steps"></div>
+          </div>
+          <div class="dem-block" data-reveal>
+            <h2><svg class="i"><use href="#i-clipboard"/></svg>Pièces à fournir</h2>
+            <p class="muted" style="margin:-.75rem 0 1.25rem">Cochez les pièces au fur et à mesure pour préparer votre dossier.</p>
+            <div class="check-progress"><span id="chk-count">0 / 0</span><div class="progress"><div class="progress__bar" id="chk-bar" style="--value:0%"></div></div></div>
+            <div class="checklist" id="dem-docs"></div>
+          </div>
+          <div class="dem-block" data-reveal>
+            <h2><svg class="i"><use href="#i-info"/></svg>Questions fréquentes</h2>
+            <div class="accordion" data-acc-single id="dem-faq"></div>
+          </div>
+          <div class="dem-block" data-reveal>
+            <div class="feedback" id="feedback">
+              <strong>Cette page vous a-t-elle été utile ?</strong>
+              <div><button class="btn btn--ghost btn--sm" type="button" data-fb>Oui</button><button class="btn btn--ghost btn--sm" type="button" data-fb>Non</button></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="aside-sticky">
+          <div class="side-card side-card--navy" data-reveal>
+            <h3>Faire la demande</h3>
+            <p style="font-size:.92rem" id="dem-online-text"></p>
+            <div style="display:grid;gap:.6rem;margin-top:1.25rem" id="dem-actions"></div>
+          </div>
+          <div class="side-card" data-reveal>
+            <h3>Au guichet</h3>
+            <ul class="info-list">
+              <li><svg class="i"><use href="#i-map-pin"/></svg><span id="dem-where">Hôtel de Ville — service de l'état civil</span></li>
+              <li><svg class="i"><use href="#i-clock"/></svg><span>Lun – Ven : 7 h 30 – 15 h 00<br>Sam : 8 h 00 – 12 h 00</span></li>
+              <li><svg class="i"><use href="#i-phone"/></svg><a href="tel:+24111552024">+241 (0)11 55 20 24</a></li>
+            </ul>
+          </div>
+          <div class="side-card" data-reveal>
+            <h3>Démarches liées</h3>
+            <div style="display:grid;gap:.25rem" id="dem-related"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/pages/demarche.js"></script>
+  <script src="assets/js/anim.js"></script>
+</body>
+</html>

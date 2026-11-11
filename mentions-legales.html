@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mentions légales, données personnelles et accessibilité — Mairie de Port-Gentil</title>
+  <meta name="description" content="Mentions légales, politique de protection des données personnelles, accessibilité et plan du site de la Mairie de Port-Gentil.">
+  <meta name="theme-color" content="#0a1c36">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>!function(h){h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('anim');setTimeout(function(){if(!window.PG_READY)h.classList.remove('anim')},3000)}}(document.documentElement)</script>
+</head>
+<body data-page="legal">
+  <div class="curtain" aria-hidden="true"><svg class="curtain__logo" viewBox="0 0 64 64"><use href="#emblem"/></svg></div>
+  <div id="site-top"></div>
+
+  <main id="main">
+    <header class="dem-hero" data-hero>
+      <div class="container">
+        <nav class="breadcrumb breadcrumb--dark" aria-label="Fil d'Ariane" data-hero-item><a href="index.html">Accueil</a><svg class="i"><use href="#i-chevron-right"/></svg><span aria-current="page">Informations légales</span></nav>
+        <h1 data-split style="font-size:var(--fs-3xl)">Informations <em class="accent">légales</em></h1>
+        <p class="lead" style="margin-top:1rem" data-hero-item>Textes à faire valider par le service juridique de la Mairie.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container legal">
+        <nav aria-label="Sections">
+          <a href="#mentions">Mentions légales</a><a href="#donnees">Données personnelles</a><a href="#cookies">Cookies & mesure d'audience</a><a href="#accessibilite">Accessibilité</a><a href="#plan">Plan du site</a>
+        </nav>
+        <div class="prose" style="max-width:none">
+          <section id="mentions">
+            <h2>Mentions légales</h2>
+            <p><strong>Éditeur :</strong> Commune de Port-Gentil — Hôtel de Ville, Port-Gentil, République Gabonaise. Téléphone : +241 (0)11 55 20 24.</p>
+            <p><strong>Directeur de la publication :</strong> le Maire de la Commune de Port-Gentil.</p>
+            <p><strong>Conception et réalisation :</strong> à compléter (agence prestataire).</p>
+            <p><strong>Hébergement :</strong> à compléter (nom, adresse et contact de l'hébergeur).</p>
+            <p><strong>Crédits photos :</strong> Mairie de Port-Gentil. Les visuels de ce prototype sont des illustrations provisoires.</p>
+          </section>
+          <section id="donnees">
+            <h2>Protection des données personnelles</h2>
+            <p>Les informations recueillies via les formulaires du site sont destinées aux seuls services municipaux compétents, pour le traitement de votre demande. Elles ne sont ni vendues ni cédées à des tiers.</p>
+            <p>Conformément à la législation gabonaise relative à la protection des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour l'exercer, écrivez à : <a class="link" href="mailto:contact@ville-portgentil.ga">contact@ville-portgentil.ga</a>.</p>
+            <p>Durées de conservation, références légales exactes et coordonnées de l'autorité de contrôle : à compléter par le service juridique.</p>
+          </section>
+          <section id="cookies">
+            <h2>Cookies & mesure d'audience</h2>
+            <p>Ce site n'utilise pas de cookies publicitaires. La mesure d'audience prévue dans la version définitive respectera la vie privée des visiteurs (outil sans cookie tiers).</p>
+          </section>
+          <section id="accessibilite">
+            <h2>Accessibilité</h2>
+            <p>La Mairie s'engage à rendre son site accessible à tous, conformément aux recommandations internationales WCAG 2.2 (niveau AA) : navigation au clavier, contrastes suffisants, textes alternatifs, respect du réglage « réduire les animations » de votre appareil.</p>
+            <p>Si vous rencontrez une difficulté, signalez-la via la <a class="link" href="contact.html">page de contact</a> : nous vous apporterons l'information par un autre moyen.</p>
+          </section>
+          <section id="plan">
+            <h2>Plan du site</h2>
+            <div class="sitemap" id="sitemap"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script>
+    document.getElementById('sitemap').innerHTML = '<div><h3>Accueil</h3><a href="index.html">Page d\'accueil</a><a href="contact.html">Contact</a><a href="agenda.html">Agenda</a></div>' +
+      PG.nav.filter(function (n) { return n.mega; }).map(function (n) {
+        return '<div><h3>' + n.label + '</h3><a href="' + n.href + '">Vue d\'ensemble</a>' + n.mega.links.map(function (l) { return '<a href="' + l[1] + '">' + l[0] + '</a>'; }).join('') + '</div>';
+      }).join('');
+  </script>
+  <script src="assets/js/anim.js"></script>
+</body>
+</html>

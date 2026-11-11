@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda — Mairie de Port-Gentil</title>
+  <meta name="description" content="Agenda civique, culturel et sportif de Port-Gentil : conseils municipaux, fêtes, événements sportifs et ateliers citoyens.">
+  <meta name="theme-color" content="#0a1c36">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>!function(h){h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('anim');setTimeout(function(){if(!window.PG_READY)h.classList.remove('anim')},3000)}}(document.documentElement)</script>
+</head>
+<body data-page="agenda" data-header="transparent">
+  <div class="curtain" aria-hidden="true"><svg class="curtain__logo" viewBox="0 0 64 64"><use href="#emblem"/></svg></div>
+  <div id="site-top"></div>
+
+  <main id="main">
+    <section class="page-hero page-hero--short" data-hero>
+      <div class="page-hero__media" data-hero-media><img src="assets/img/fete-de-la-mer-regate.webp" alt=""></div>
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane" data-hero-item><a href="index.html">Accueil</a><svg class="i"><use href="#i-chevron-right"/></svg><span aria-current="page">Agenda</span></nav>
+        <span class="eyebrow eyebrow--light" data-hero-item>Sortir à Port-Gentil</span>
+        <h1 data-split style="margin-top:1rem">Agenda civique <em class="accent" style="color:var(--gold-300)">& culturel</em></h1>
+        <p class="lead" data-hero-item>Séances du conseil, fêtes, sport, ateliers citoyens : tous les rendez-vous de la ville.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <a class="event-feature" href="#fete-de-la-mer" style="min-height:460px;margin-bottom:3.5rem" data-reveal="clip">
+          <img src="assets/img/regate-pirogues.webp" alt="Régate de pirogues" loading="lazy">
+          <span class="event-feature__date"><strong>14</strong><span>Nov.</span></span>
+          <div class="event-feature__body">
+            <span class="tag tag--glass">Temps fort de l'année</span>
+            <h3 style="font-size:var(--fs-2xl);max-width:20ch">Grande Fête de la Mer &amp; Régate de l'Île Mandji</h3>
+            <div class="event-feature__meta"><span><svg class="i i--sm"><use href="#i-calendar"/></svg>14 – 15 novembre 2026</span><span><svg class="i i--sm"><use href="#i-map-pin"/></svg>Front de mer</span><span><svg class="i i--sm"><use href="#i-users"/></svg>Entrée libre</span></div>
+          </div>
+        </a>
+
+        <div class="agenda-toolbar" data-reveal>
+          <div class="chips" id="ev-cats"></div>
+          <div class="tabs" role="tablist" aria-label="Affichage">
+            <button class="tab" role="tab" aria-selected="true" data-view="list"><svg class="i i--sm" style="vertical-align:-3px"><use href="#i-list"/></svg> Liste</button>
+            <button class="tab" role="tab" aria-selected="false" data-view="cal"><svg class="i i--sm" style="vertical-align:-3px"><use href="#i-calendar"/></svg> Calendrier</button>
+          </div>
+        </div>
+        <div id="view-list"></div>
+        <div id="view-cal" hidden>
+          <div class="calendar">
+            <div class="calendar__head">
+              <button class="icon-btn" type="button" id="cal-prev" aria-label="Mois précédent"><svg class="i"><use href="#i-chevron-left"/></svg></button>
+              <h3 id="cal-title">Octobre 2026</h3>
+              <button class="icon-btn" type="button" id="cal-next" aria-label="Mois suivant"><svg class="i"><use href="#i-chevron-right"/></svg></button>
+            </div>
+            <div class="calendar__grid" id="cal-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight section--alt">
+      <div class="container callout" data-reveal>
+        <div><h2 class="h3">Vous organisez un événement ?</h2><p style="margin-top:.5rem">Associations, quartiers, écoles : proposez votre événement pour l'agenda municipal.</p></div>
+        <a class="btn btn--white" href="contact.html?objet=evenement#ecrire"><svg class="i"><use href="#i-calendar-plus"/></svg>Proposer un événement</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/pages/agenda.js"></script>
+  <script src="assets/js/anim.js"></script>
+</body>
+</html>

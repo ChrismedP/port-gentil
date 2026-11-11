@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mairie de Port-Gentil — Site officiel de la Commune</title>
+  <meta name="description" content="Site officiel de la Mairie de Port-Gentil : démarches en ligne, actualités, agenda, grands projets et informations pratiques pour les habitants de l'Île Mandji.">
+  <meta name="theme-color" content="#0a1c36">
+  <meta property="og:title" content="Mairie de Port-Gentil — Site officiel">
+  <meta property="og:description" content="Démarches, actualités et grands projets de la capitale économique du Gabon.">
+  <meta property="og:image" content="assets/img/hero-cote-aerienne.webp">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+  <link rel="preload" as="image" href="assets/img/hero-cote-aerienne.webp">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <script>!function(h){h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('anim');setTimeout(function(){if(!window.PG_READY)h.classList.remove('anim')},3000)}}(document.documentElement)</script>
+</head>
+<body data-page="accueil" data-header="transparent">
+  <div class="curtain" aria-hidden="true"><svg class="curtain__logo" viewBox="0 0 64 64"><use href="#emblem"/></svg></div>
+  <div id="site-top"></div>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" data-hero aria-labelledby="hero-title">
+        <div class="hero__media" data-hero-media>
+        <video
+          src="assets/video/video_hero_section.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="assets/img/hero-cote-aerienne.webp"
+          aria-label="Vue aérienne du littoral et de la ville de Port-Gentil">
+        </video>
+      </div>
+      <!-- <div class="hero__media" data-hero-media>
+        <img src="assets/img/hero-cote-aerienne.webp" alt="Vue aérienne du littoral et de la ville de Port-Gentil" fetchpriority="high">
+      </div> -->
+
+      <div class="container hero__inner">
+        <div>
+          <span class="eyebrow eyebrow--light" data-hero-item>Hôtel de Ville · Île Mandji</span>
+          <h1 class="hero__title" id="hero-title" data-split>Port-Gentil, <em>l'essor insulaire</em> au service de ses citoyens.</h1>
+          <p class="hero__lead" data-hero-item>Démarches en ligne, grands projets, vie des quartiers : la Mairie de la capitale économique du Gabon à portée de main.</p>
+          <div class="hero__actions" data-hero-item>
+            <a class="btn btn--white" href="services.html" data-magnetic><svg class="i"><use href="#i-clipboard"/></svg>Accéder aux démarches<svg class="i i--arrow"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn--ghost-light" href="ville.html">Découvrir la ville</a>
+          </div>
+        </div>
+
+        <aside class="express" data-hero-item aria-labelledby="express-title">
+          <div class="express__head">
+            <h2 id="express-title">Guichet express</h2>
+            <span class="express__live"><span class="dot dot--live"></span><span data-open-label>Guichets ouverts</span></span>
+          </div>
+          <button class="express__search" type="button" data-search-open aria-label="Rechercher une démarche">
+            <svg class="i"><use href="#i-search"/></svg><span>Acte de naissance, permis, patente…</span><kbd>Ctrl K</kbd><b><svg class="i"><use href="#i-arrow-right"/></svg></b>
+          </button>
+          <div class="express__list">
+            <a class="express__link" href="demarche.html?id=acte-naissance"><span class="express__icon"><svg class="i"><use href="#i-file"/></svg></span><span><strong>Acte d'état civil</strong><small>Délivrance sous 48 h</small></span><svg class="i"><use href="#i-chevron-right"/></svg></a>
+            <a class="express__link" href="demarche.html?id=permis-construire"><span class="express__icon"><svg class="i"><use href="#i-urbanisme"/></svg></span><span><strong>Permis &amp; foncier</strong><small>Dépôt dématérialisé</small></span><svg class="i"><use href="#i-chevron-right"/></svg></a>
+            <a class="express__link" href="contact.html#rendez-vous"><span class="express__icon"><svg class="i"><use href="#i-calendar"/></svg></span><span><strong>Prendre rendez-vous</strong><small>Guichets et permanences des élus</small></span><svg class="i"><use href="#i-chevron-right"/></svg></a>
+            <a class="express__link" href="contact.html#signaler"><span class="express__icon"><svg class="i"><use href="#i-alert"/></svg></span><span><strong>Signaler un problème</strong><small>Voirie, éclairage, déchets</small></span><svg class="i"><use href="#i-chevron-right"/></svg></a>
+          </div>
+          <a class="express__all" href="services.html#catalogue">Voir toutes les démarches <svg class="i i--sm"><use href="#i-arrow-right"/></svg></a>
+        </aside>
+      </div>
+
+      <div class="container hero__bottom" data-hero-item>
+        <span class="scroll-cue"><span class="scroll-cue__line"></span>Défiler</span>
+        <span class="hero__clock"><svg class="i i--sm"><use href="#i-clock"/></svg>Port-Gentil · <span data-clock>--:--</span></span>
+      </div>
+
+      <div class="hero__waves" aria-hidden="true">
+        <svg class="w1" viewBox="0 0 2880 70" preserveAspectRatio="none"><path fill="#fff" d="M0 35c240 0 240-30 480-30s240 30 480 30 240-30 480-30 240 30 480 30 240-30 480-30 240 30 480 30v35H0z"/></svg>
+        <svg class="w2" viewBox="0 0 2880 70" preserveAspectRatio="none"><path fill="#fff" d="M0 45c180 0 180-25 360-25s180 25 360 25 180-25 360-25 180 25 360 25 180-25 360-25 180 25 360 25 180-25 360-25 180 25 360 25v25H0z"/></svg>
+      </div>
+    </section>
+
+    <!-- ===================== INFOS FLASH ===================== -->
+    <div class="ticker" role="region" aria-label="Informations flash">
+      <span class="ticker__label"><span class="dot dot--live"></span>Infos flash</span>
+      <div class="ticker__track" id="ticker"></div>
+    </div>
+
+    <!-- ===================== ACCÈS RAPIDE ===================== -->
+    <section class="section" aria-labelledby="quick-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Accès rapide</span>
+            <h2 class="h2" id="quick-title" data-split>Que souhaitez-vous faire <em class="accent">aujourd'hui</em> ?</h2>
+          </div>
+          <a class="link" href="services.html#catalogue" data-reveal>Toutes les démarches <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="quick-grid" id="quick-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== MOT DU MAIRE ===================== -->
+    <section class="section section--alt" aria-labelledby="mayor-title">
+      <div class="container mayor">
+        <div class="mayor__visual" data-reveal="left">
+  <!-- <div class="mayor__frame" aria-hidden="true"></div> -->
+  <div class="mayor__portrait">
+    <img src="assets/img2/maire1.jpg" alt="Portrait officiel du Maire de la Commune de Port-Gentil" loading="lazy">
+  </div>
+  <div class="mayor__badge"><svg class="i"><use href="#i-landmark"/></svg><div><strong>Maire de la Commune</strong><span>Port-Gentil · Ogooué-Maritime</span></div></div>
+</div>
+        <div>
+          <span class="eyebrow" data-reveal>Le mot du Maire</span>
+          <svg class="mayor__quote-mark" data-reveal><use href="#i-quote"/></svg>
+          <h2 class="mayor__quote" id="mayor-title" data-split>Bâtir une ville moderne, équitable et résolument tournée vers sa jeunesse.</h2>
+          <div class="mayor__text flow" data-reveal>
+            <p>Port-Gentil porte une part essentielle de l'économie nationale. Notre responsabilité est de faire en sorte que cette richesse se traduise, pour chaque habitant, par des services publics plus proches, des quartiers plus sûrs et un cadre de vie plus agréable.</p>
+            <p>Modernisation de l'état civil, assainissement, voirie, emploi des jeunes : nous avançons chaque jour, avec vous et en toute transparence.</p>
+          </div>
+          <div class="mayor__sign" data-reveal>
+            <div><strong data-mayor-name>Pascal Houangni Ambouroue</strong><span>Maire de la Commune de Port-Gentil</span></div>
+          </div>
+          <div class="mayor__actions" data-reveal>
+            <a class="btn" href="mairie.html#le-maire">Lire le message complet<svg class="i i--arrow"><use href="#i-arrow-right"/></svg></a>
+            <a class="link" href="agenda.html">Agenda du Maire <svg class="i"><use href="#i-arrow-right"/></svg></a>
+          </div>
+          <span class="note-provisoire" data-reveal><svg class="i i--sm"><use href="#i-info"/></svg>Texte provisoire — à valider par le Cabinet du Maire</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACTUALITÉS ===================== -->
+    <section class="section" aria-labelledby="news-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Actualités</span>
+            <h2 class="h2" id="news-title" data-split>La vie de la cité, <em class="accent">au quotidien</em></h2>
+          </div>
+          <a class="link" href="actualites.html" data-reveal>Toutes les actualités <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="news-layout">
+          <div id="news-feature"></div>
+          <div class="grid grid-3" id="news-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CHIFFRES ===================== -->
+    <section class="section section--navy figures" aria-labelledby="fig-title">
+      <div class="figures__bg" data-parallax="0.3"><img src="assets/img/vue-aerienne-nuit.webp" alt="" loading="lazy"></div>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow eyebrow--light" data-reveal>Port-Gentil en chiffres</span>
+            <h2 class="h2" id="fig-title" data-split>Une cité océane au cœur du <em class="accent">destin économique</em> national</h2>
+          </div>
+          <a class="btn btn--ghost-light" href="ville.html#economie" data-reveal>Découvrir l'économie locale<svg class="i i--arrow"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="figures__grid">
+          <div class="figures__item" data-reveal><div class="stat__value"><span data-count="136000">136 000</span></div><p class="stat__label">habitants sur l'Île Mandji, deuxième ville du pays</p></div>
+          <div class="figures__item" data-reveal><div class="stat__value"><span data-count="4">4</span></div><p class="stat__label">arrondissements et leurs mairies de proximité</p></div>
+          <div class="figures__item" data-reveal><div class="stat__value"><span data-count="38">38</span></div><p class="stat__label">projets et chantiers suivis publiquement</p></div>
+          <div class="figures__item" data-reveal><div class="stat__value"><span data-count="10" id="online-count">10</span><small>en ligne</small></div><p class="stat__label">démarches accessibles depuis votre téléphone</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CHANTIERS ===================== -->
+    <section class="section" aria-labelledby="works-title">
+      <div class="container works">
+        <div class="works__aside">
+          <span class="eyebrow" data-reveal>Nos actions</span>
+          <h2 class="h2" id="works-title" data-split>Port-Gentil se transforme, <em class="accent">chantier après chantier</em></h2>
+          <p class="lead" data-reveal>Voirie, éclairage solaire, assainissement, équipements : suivez en temps réel l'avancement des projets qui changent votre quotidien.</p>
+          <div class="works__summary" data-reveal>
+            <div><strong data-count="24">24</strong><span>chantiers en cours</span></div>
+            <div><strong data-count="14">14</strong><span>projets livrés en 2026</span></div>
+          </div>
+          <a class="btn" href="actions.html#carte" data-reveal><svg class="i"><use href="#i-map"/></svg>Voir la carte des projets</a>
+        </div>
+        <div class="works__grid" id="works-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== AGENDA ===================== -->
+    <section class="section section--alt" aria-labelledby="agenda-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Agenda</span>
+            <h2 class="h2" id="agenda-title" data-split>À ne pas <em class="accent">manquer</em></h2>
+          </div>
+          <a class="link" href="agenda.html" data-reveal>Tout l'agenda <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="agenda">
+          <a class="event-feature" href="agenda.html#fete-de-la-mer" data-reveal="clip">
+            <img src="assets/img/fete-de-la-mer-regate.webp" alt="Régate de pirogues devant une foule sur le front de mer" loading="lazy">
+            <span class="event-feature__date"><strong>14</strong><span>Nov.</span></span>
+            <div class="event-feature__body">
+              <span class="tag tag--glass">Temps fort · Culture</span>
+              <h3>Grande Fête de la Mer &amp; Régate de l'Île Mandji</h3>
+              <div class="event-feature__meta"><span><svg class="i i--sm"><use href="#i-calendar"/></svg>14 – 15 novembre 2026</span><span><svg class="i i--sm"><use href="#i-map-pin"/></svg>Front de mer</span></div>
+              <div class="event-feature__actions"><span class="btn btn--white btn--sm">Voir le programme<svg class="i i--arrow"><use href="#i-arrow-right"/></svg></span></div>
+            </div>
+          </a>
+          <div class="agenda__list" id="agenda-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DÉCOUVRIR ===================== -->
+    <section class="discover" data-hscroll aria-labelledby="discover-title">
+      <div class="discover__track" data-hscroll-track>
+        <div class="discover__intro">
+          <span class="eyebrow eyebrow--light">Découvrir</span>
+          <h2 id="discover-title" data-split>Les incontournables de l'<em class="accent">Île Mandji</em></h2>
+          <p>Entre océan Atlantique, delta et mangroves, Port-Gentil offre des paysages uniques et une histoire maritime riche.</p>
+          <span class="discover__hint">Faites défiler <svg class="i"><use href="#i-arrow-right"/></svg></span>
+        </div>
+        <article class="place"><img src="assets/img2/decouvrir/1.webp" alt="Phare du Cap Lopez au coucher du soleil" loading="lazy"><span class="place__num">01</span><div class="place__body"><h3>Le Phare du Cap Lopez</h3><p>Sentinelle historique à la pointe nord de l'île, face aux courants de l'Atlantique.</p><a class="place__tag" href="ville.html#decouvrir">Patrimoine <svg class="i i--sm"><use href="#i-arrow-right"/></svg></a></div></article>
+        <article class="place"><img src="assets/img2/decouvrir/2.webp" alt="Nouveau front de mer aménagé" loading="lazy"><span class="place__num">02</span><div class="place__body"><h3>Le front de mer &amp; la plage Sogara</h3><p>La nouvelle promenade solaire, lieu de rendez-vous des familles et des sportifs.</p><a class="place__tag" href="ville.html#decouvrir">Promenade <svg class="i i--sm"><use href="#i-arrow-right"/></svg></a></div></article>
+        <article class="place"><img src="assets/img2/decouvrir/3.webp" alt="Hôtel de Ville de Port-Gentil" loading="lazy"><span class="place__num">03</span><div class="place__body"><h3>L'Hôtel de Ville</h3><p>Cœur de la vie civique, sur l'esplanade du centre-ville.</p><a class="place__tag" href="mairie.html">Institution <svg class="i i--sm"><use href="#i-arrow-right"/></svg></a></div></article>
+        <article class="place"><img src="assets/img2/decouvrir/4.webp" alt="Étals colorés au grand marché" loading="lazy"><span class="place__num">04</span><div class="place__body"><h3>Le Grand Marché</h3><p>Poissons, épices et produits frais : l'âme commerçante de la ville.</p><a class="place__tag" href="ville.html#decouvrir">Commerce <svg class="i i--sm"><use href="#i-arrow-right"/></svg></a></div></article>
+        <article class="place"><img src="assets/img2/decouvrir/5.webp" alt="Méandres du delta et forêt de mangroves" loading="lazy"><span class="place__num">05</span><div class="place__body"><h3>Le delta des mangroves</h3><p>Un écosystème exceptionnel à explorer en pirogue, entre lagunes et forêts.</p><a class="place__tag" href="ville.html#decouvrir">Nature <svg class="i i--sm"><use href="#i-arrow-right"/></svg></a></div></article>
+        <article class="place"><img src="assets/img2/decouvrir/6.webp" alt="Bateaux amarrés dans la rade" loading="lazy"><span class="place__num">06</span><div class="place__body"><h3>La rade &amp; le port</h3><p>Pêche artisanale, bois et énergie : le port, poumon économique de l'île.</p><a class="place__tag" href="ville.html#economie">Économie <svg class="i i--sm"><use href="#i-arrow-right"/></svg></a></div></article>
+      </div>
+    </section>
+
+    <!-- ===================== AGIR ===================== -->
+    <section class="section" aria-labelledby="act-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Participer</span>
+            <h2 class="h2" id="act-title" data-split>Agir pour <em class="accent">ma ville</em></h2>
+            <p class="lead" data-reveal>Chaque habitant peut contribuer à rendre Port-Gentil plus propre, plus sûre et plus solidaire.</p>
+          </div>
+        </div>
+        <div class="act-grid">
+          <article class="act act--navy" data-reveal>
+            <span class="act__icon"><svg class="i"><use href="#i-alert"/></svg></span>
+            <h3>Signaler un problème</h3>
+            <p>Nid-de-poule, lampadaire en panne, dépôt sauvage : prévenez les services en deux minutes, photo à l'appui.</p>
+            <a class="act__go" href="contact.html#signaler">Faire un signalement <svg class="i"><use href="#i-arrow-right"/></svg></a>
+            <svg class="act__deco" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1"><use href="#i-alert"/></svg>
+          </article>
+          <article class="act act--ocean" data-reveal>
+            <span class="act__icon"><svg class="i"><use href="#i-lightbulb"/></svg></span>
+            <h3>Proposer un projet de quartier</h3>
+            <p>Le budget participatif finance les idées des habitants votées par les comités de développement des quartiers.</p>
+            <a class="act__go" href="actions.html#participer">Déposer une idée <svg class="i"><use href="#i-arrow-right"/></svg></a>
+            <svg class="act__deco" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1"><use href="#i-lightbulb"/></svg>
+          </article>
+          <article class="act act--sand" data-reveal>
+            <span class="act__icon"><svg class="i"><use href="#i-heart"/></svg></span>
+            <h3>Devenir bénévole</h3>
+            <p>Journées citoyennes, événements, solidarité : rejoignez le réseau des bénévoles municipaux.</p>
+            <a class="act__go" href="actions.html#participer">Rejoindre le réseau <svg class="i"><use href="#i-arrow-right"/></svg></a>
+            <svg class="act__deco" viewBox="0 0 24 24" fill="none" stroke="#0a1c36" stroke-width="1"><use href="#i-heart"/></svg>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INFOS PRATIQUES ===================== -->
+    <section class="section section--tight section--alt" aria-labelledby="prat-title">
+      <div class="container">
+        <h2 class="sr-only" id="prat-title">Informations pratiques</h2>
+        <div class="practical">
+          <div class="practical__card" data-reveal>
+            <h3><svg class="i"><use href="#i-clock"/></svg>Horaires des guichets</h3>
+            <ul class="hours" id="hours"></ul>
+            <span class="open-state" id="open-state"></span>
+          </div>
+          <div class="practical__card" id="urgences-home" data-reveal>
+            <h3><svg class="i"><use href="#i-siren"/></svg>Numéros d'urgence</h3>
+            <div class="urgent-list" id="urgent-list"></div>
+          </div>
+          <div class="practical__map" data-reveal>
+            <img src="assets/img/carte-ile-mandji.webp" alt="Carte de l'Île Mandji" loading="lazy">
+            <a class="btn btn--sm" href="contact.html#plan"><svg class="i"><use href="#i-map-pin"/></svg>Venir à l'Hôtel de Ville</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/pages/home.js"></script>
+  <script src="assets/js/anim.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actualités — Mairie de Port-Gentil</title>
+  <meta name="description" content="Actualités, avis officiels, médiathèque et espace presse de la Mairie de Port-Gentil.">
+  <meta name="theme-color" content="#0a1c36">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>!function(h){h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('anim');setTimeout(function(){if(!window.PG_READY)h.classList.remove('anim')},3000)}}(document.documentElement)</script>
+</head>
+<body data-page="actualites" data-header="transparent">
+  <div class="curtain" aria-hidden="true"><svg class="curtain__logo" viewBox="0 0 64 64"><use href="#emblem"/></svg></div>
+  <div id="site-top"></div>
+
+  <main id="main">
+    <section class="page-hero page-hero--short" data-hero>
+      <div class="page-hero__media" data-hero-media><img src="assets/img/conference-hotel-de-ville.webp" alt=""></div>
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane" data-hero-item><a href="index.html">Accueil</a><svg class="i"><use href="#i-chevron-right"/></svg><span aria-current="page">Actualités</span></nav>
+        <span class="eyebrow eyebrow--light" data-hero-item>Salle de presse</span>
+        <h1 data-split style="margin-top:1rem">Actualités</h1>
+        <p class="lead" data-hero-item>Toute l'information de votre ville : décisions municipales, travaux, culture, sport et vie des quartiers.</p>
+      </div>
+    </section>
+
+    <nav class="subnav" aria-label="Dans cette page">
+      <div class="container"><div class="subnav__list">
+        <a class="subnav__link" href="#une"><small>01</small>À la une</a>
+        <a class="subnav__link" href="#flux"><small>02</small>Toutes les actualités</a>
+        <a class="subnav__link" href="#avis"><small>03</small>Avis & communiqués</a>
+        <a class="subnav__link" href="#mediatheque"><small>04</small>Médiathèque</a>
+        <a class="subnav__link" href="#presse"><small>05</small>Espace presse</a>
+        <a class="subnav__link" href="#alertes"><small>06</small>Rester informé</a>
+      </div></div>
+    </nav>
+
+    <!-- À la une -->
+    <section class="section" id="une">
+      <div class="container">
+        <div class="alert-bar" id="alert-bar" role="alert" style="margin:0 0 2.5rem">
+          <svg class="i"><use href="#i-alert"/></svg>
+          <p><strong>Avis de houle :</strong> la baignade est interdite au Cap Lopez jusqu'à dimanche en raison de forts coefficients de marée.</p>
+          <a href="#avis">Consulter l'avis</a>
+          <button type="button" aria-label="Masquer l'alerte"><svg class="i i--sm"><use href="#i-x"/></svg></button>
+        </div>
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>À la une</span>
+            <h2 class="h2" data-split>À la une de <em class="accent">Mandji</em></h2>
+          </div>
+        </div>
+        <div class="headline">
+          <article class="headline__main" id="headline-main" data-reveal="clip"></article>
+          <div class="headline__side" id="headline-side"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flux -->
+    <section class="section section--alt" id="flux">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Fil d'actualité</span>
+            <h2 class="h2" data-split>Toutes les actualités <em class="accent">municipales</em></h2>
+          </div>
+        </div>
+        <div class="news-toolbar" data-reveal>
+          <div class="chips" id="news-cats"></div>
+          <div class="news-toolbar__right">
+            <label class="docs-search"><svg class="i"><use href="#i-search"/></svg><span class="sr-only">Rechercher une actualité</span><input class="input" type="search" id="news-q" placeholder="Rechercher…"></label>
+          </div>
+        </div>
+        <div class="grid grid-3" id="news-list"></div>
+        <div class="load-more"><button class="btn btn--ghost" type="button" id="load-more"><svg class="i"><use href="#i-plus"/></svg>Charger plus d'actualités</button></div>
+      </div>
+    </section>
+
+    <!-- Avis -->
+    <section class="section" id="avis">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Publications légales</span>
+            <h2 class="h2" data-split>Avis & communiqués <em class="accent">officiels</em></h2>
+          </div>
+          <a class="link" href="mairie.html#transparence" data-reveal>Recueil des arrêtés <svg class="i"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+        <div class="avis" id="avis-list"></div>
+      </div>
+    </section>
+
+    <!-- Médiathèque -->
+    <section class="section section--alt" id="mediatheque">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Médiathèque</span>
+            <h2 class="h2" data-split>En images <em class="accent">et en vidéo</em></h2>
+          </div>
+          <a class="link" href="https://www.facebook.com/LADRECMAIRIEDEPOG" target="_blank" rel="noopener" data-reveal>Page Facebook officielle <svg class="i"><use href="#i-external"/></svg></a>
+        </div>
+        <div class="media-feature" id="video-open" role="button" tabindex="0" aria-label="Lire la vidéo" data-reveal="clip">
+          <img src="assets/img/conseil-municipal-direct.webp" alt="" loading="lazy">
+          <span class="play"><svg class="i"><use href="#i-play"/></svg></span>
+          <div><span class="tag tag--glass"><svg class="i i--sm"><use href="#i-video"/></svg>Vidéo · 12 min</span><h3>Bilan de mi-mandat : le Maire s'adresse aux habitants de Port-Gentil</h3></div>
+        </div>
+        <div class="albums">
+          <a class="album" href="article.html?id=inauguration-boulevard-maritime" data-reveal><img src="assets/img/inauguration-quai-lumineux-sm.webp" alt="" loading="lazy"><div><small><svg class="i i--sm"><use href="#i-image"/></svg>48 photos</small><h4>Inauguration de la promenade océanique</h4></div></a>
+          <a class="album" href="#mediatheque" data-reveal><img src="assets/img/deliberation-delegues-sm.webp" alt="" loading="lazy"><div><small><svg class="i i--sm"><use href="#i-video"/></svg>Vidéo</small><h4>Délibérations du Conseil municipal</h4></div></a>
+          <a class="album" href="#mediatheque" data-reveal><img src="assets/img/pirogues-port-peche-sm.webp" alt="" loading="lazy"><div><small><svg class="i i--sm"><use href="#i-image"/></svg>32 photos</small><h4>Portraits d'artisans & pêcheurs de Mandji</h4></div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Presse -->
+    <section class="section" id="presse">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Espace presse</span>
+            <h2 class="h2" data-split>Presse & ressources <em class="accent">institutionnelles</em></h2>
+          </div>
+        </div>
+        <div class="press">
+          <a href="#presse" data-press data-reveal><svg class="i"><use href="#i-download"/></svg><h4>Kit média officiel 2026</h4><p>Logos, photos HD et charte graphique (ZIP)</p></a>
+          <a href="#presse" data-press data-reveal><svg class="i"><use href="#i-file"/></svg><h4>Dernier dossier de presse</h4><p>Les grands projets de la mandature (PDF)</p></a>
+          <div data-reveal><svg class="i"><use href="#i-mail"/></svg><h4>Contact presse</h4><p>Service communication<br><a class="link" href="mailto:presse@ville-portgentil.ga">presse@ville-portgentil.ga</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alertes -->
+    <section class="section section--navy" id="alertes">
+      <div class="container subscribe">
+        <div>
+          <span class="eyebrow eyebrow--light" data-reveal>Rester informé</span>
+          <h2 class="h2" data-split style="margin-top:1rem">Ne manquez rien de <em class="accent">votre ville</em></h2>
+          <p style="margin-top:1rem" data-reveal>Recevez les alertes travaux, les avis importants et l'agenda culturel directement dans votre boîte mail.</p>
+          <div class="socials" data-reveal>
+            <a href="https://www.facebook.com/LADRECMAIRIEDEPOG" target="_blank" rel="noopener"><svg class="i"><use href="#i-facebook"/></svg>Facebook</a>
+            <a href="#alertes"><svg class="i"><use href="#i-youtube"/></svg>YouTube</a>
+            <a href="#alertes"><svg class="i"><use href="#i-whatsapp"/></svg>Chaîne WhatsApp</a>
+          </div>
+        </div>
+        <form data-newsletter data-reveal>
+          <label class="check"><input type="checkbox" checked>Toute l'actualité</label>
+          <label class="check"><input type="checkbox" checked>Avis de travaux & alertes</label>
+          <label class="check"><input type="checkbox">Agenda culturel & sportif</label>
+          <div class="subscribe__row"><input class="input" type="email" placeholder="Votre adresse e-mail" aria-label="Adresse e-mail" required><button class="btn btn--accent" type="submit">S'abonner</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Vidéo">
+    <div class="modal__box">
+      <button class="modal__close" type="button" aria-label="Fermer"><svg class="i"><use href="#i-x"/></svg></button>
+      <div style="padding:2rem"><svg class="i" style="width:56px;height:56px;margin:0 auto 1rem;color:var(--ocean-400)"><use href="#i-video"/></svg><p style="font-family:var(--font-display);font-size:1.5rem;color:#fff">Lecteur vidéo</p><p style="margin-top:.5rem">Les vidéos officielles seront intégrées ici depuis la page Facebook ou la chaîne YouTube de la Mairie.</p></div>
+    </div>
+  </div>
+
+  <div id="site-bottom"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/pages/actualites.js"></script>
+  <script src="assets/js/anim.js"></script>
+</body>
+</html>

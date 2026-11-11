@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nos actions — Projets, chantiers et budget | Mairie de Port-Gentil</title>
+  <meta name="description" content="Carte des réalisations, travaux de proximité, grands projets et budget de la Commune de Port-Gentil.">
+  <meta name="theme-color" content="#0a1c36">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+  <link rel="stylesheet" href="assets/vendor/leaflet.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>!function(h){h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('anim');setTimeout(function(){if(!window.PG_READY)h.classList.remove('anim')},3000)}}(document.documentElement)</script>
+</head>
+<body data-page="actions" data-header="transparent">
+  <div class="curtain" aria-hidden="true"><svg class="curtain__logo" viewBox="0 0 64 64"><use href="#emblem"/></svg></div>
+  <div id="site-top"></div>
+
+  <main id="main">
+    <section class="page-hero" data-hero>
+      <div class="page-hero__media" data-hero-media><img src="assets/img/equipe-boulevard-maritime.webp" alt="Ingénieurs municipaux sur le chantier du boulevard maritime"></div>
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane" data-hero-item><a href="index.html">Accueil</a><svg class="i"><use href="#i-chevron-right"/></svg><span aria-current="page">Nos actions</span></nav>
+        <span class="eyebrow eyebrow--light" data-hero-item>Projets & chantiers</span>
+        <h1 data-split style="margin-top:1rem">Nos actions pour <em class="accent" style="color:var(--gold-300)">Port-Gentil</em></h1>
+        <p class="lead" data-hero-item>Voirie, éclairage, assainissement, équipements : suivez, quartier par quartier, la transformation de votre ville.</p>
+        <div class="page-hero__meta" data-hero-item>
+          <span class="tag tag--glass"><strong data-count="38">38</strong>&nbsp;projets suivis</span>
+          <span class="tag tag--glass"><strong data-count="24">24</strong>&nbsp;en cours</span>
+          <span class="tag tag--glass"><strong data-count="14">14</strong>&nbsp;livrés en 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <nav class="subnav" aria-label="Dans cette page">
+      <div class="container"><div class="subnav__list">
+        <a class="subnav__link" href="#carte"><small>01</small>Carte</a>
+        <a class="subnav__link" href="#travaux"><small>02</small>Travaux</a>
+        <a class="subnav__link" href="#grands-projets"><small>03</small>Grands projets</a>
+        <a class="subnav__link" href="#social"><small>04</small>Vie sociale</a>
+        <a class="subnav__link" href="#budget"><small>05</small>Budget</a>
+        <a class="subnav__link" href="#participer"><small>06</small>Participer</a>
+      </div></div>
+    </nav>
+
+    <!-- Carte -->
+    <section class="section" id="carte">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Vue d'ensemble</span>
+            <h2 class="h2" data-split>La carte vivante des <em class="accent">réalisations</em></h2>
+          </div>
+        </div>
+        <div class="map-toolbar" data-reveal>
+          <div class="chips" id="map-cats"></div>
+          <select class="select" id="map-arr" aria-label="Filtrer par arrondissement"><option value="">Tous les secteurs</option></select>
+        </div>
+        <div class="map-layout" data-reveal>
+          <div class="map" id="map"><div class="map-fallback" id="map-fallback">Chargement de la carte…</div></div>
+          <div class="map-list" id="map-list" data-lenis-prevent></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travaux -->
+    <section class="section section--alt" id="travaux">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Travaux de proximité</span>
+            <h2 class="h2" data-split>Améliorer le quotidien, <em class="accent">quartier par quartier</em></h2>
+          </div>
+          <a class="link" href="actualites.html#avis" data-reveal>Plans de déviation <svg class="i"><use href="#i-external"/></svg></a>
+        </div>
+        <div class="split" style="align-items:start">
+          <div class="works-list">
+            <article class="work" data-reveal><span class="work__status"><svg class="i i--lg"><use href="#i-hard-hat"/></svg></span><div><h3>Bitumage et caniveaux — carrefour Tobia vers Grand Village</h3><p>2e arr. · Circulation alternée jusqu'au 30 novembre</p></div><span class="work__pct" data-count="72" data-suffix=" %">72 %</span></article>
+            <article class="work" data-reveal><span class="work__status"><svg class="i i--lg"><use href="#i-sun"/></svg></span><div><h3>Déploiement de 450 lampadaires solaires</h3><p>Tous secteurs · 290 déjà installés</p></div><span class="work__pct" data-count="64" data-suffix=" %">64 %</span></article>
+            <article class="work" data-reveal><span class="work__status"><svg class="i i--lg"><use href="#i-droplet"/></svg></span><div><h3>Curage hydraulique du canal de la Balise</h3><p>2e arr. · Avant la saison des pluies</p></div><span class="work__pct" data-count="55" data-suffix=" %">55 %</span></article>
+            <article class="work" data-reveal><span class="work__status work__status--done"><svg class="i i--lg"><use href="#i-check"/></svg></span><div><h3>Réfection de la place du marché de Balise</h3><p>Livré en septembre 2026</p></div><span class="work__pct">100 %</span></article>
+          </div>
+          <div data-reveal>
+            <div class="ba" id="ba">
+              <img src="assets/img/apres-front-de-mer.webp" alt="Le front de mer après réaménagement">
+              <img class="ba__before" src="assets/img/avant-front-de-mer.webp" alt="Le front de mer avant réaménagement">
+              <span class="ba__label ba__label--l">Avant</span><span class="ba__label ba__label--r">Après</span>
+              <div class="ba__handle"><span><svg class="i"><use href="#i-chevron-left"/></svg><svg class="i"><use href="#i-chevron-right"/></svg></span></div>
+              <input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après">
+            </div>
+            <p class="muted" style="margin-top:1rem;font-size:.9rem;text-align:center">Glissez pour comparer : le front de mer avant et après réaménagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grands projets -->
+    <section class="section" id="grands-projets">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Grands projets</span>
+            <h2 class="h2" data-split>Bâtir le Port-Gentil <em class="accent">de demain</em></h2>
+          </div>
+        </div>
+        <article class="big-project" data-reveal>
+          <div class="big-project__media"><img src="assets/img/port-terminal-aerien.webp" alt="Vue aérienne du futur pôle portuaire" loading="lazy" data-parallax="0.12"></div>
+          <div class="big-project__body">
+            <span class="tag tag--glass" style="width:fit-content">Projet phare · Économie bleue</span>
+            <h3>Nouveau port de pêche & pôle halieutique</h3>
+            <p>Un débarcadère moderne, une halle à marée, une chaîne du froid et des ateliers de transformation pour structurer la filière pêche artisanale et créer des emplois locaux.</p>
+            <div class="big-project__kpis"><div><strong>12 Md</strong><span>FCFA d'investissement</span></div><div><strong data-count="600">600</strong><span>emplois attendus</span></div><div><strong>2029</strong><span>mise en service</span></div></div>
+            <div class="project__progress"><div class="project__row" style="color:#93a6bd"><span>Études & financement</span><strong>18 %</strong></div><div class="progress" style="background:rgba(255,255,255,.12)"><div class="progress__bar" data-progress style="--value:18%"></div></div></div>
+          </div>
+        </article>
+        <div class="grid grid-3" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Vie sociale -->
+    <section class="section section--alt" id="social">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Vie socio-culturelle</span>
+            <h2 class="h2" data-split>Solidarité, jeunesse <em class="accent">& culture</em></h2>
+          </div>
+          <a class="link" href="agenda.html" data-reveal>Agenda des événements <svg class="i"><use href="#i-calendar"/></svg></a>
+        </div>
+        <div class="social-grid">
+          <article class="bento__item" data-reveal><img src="assets/img/jeunesse-metiers-mer.webp" alt="" loading="lazy"><span class="tag tag--glass" style="width:fit-content;margin-bottom:auto">Jeunesse</span><h3 style="font-size:var(--fs-xl)">500 bourses « Métiers de la mer »</h3><p>Formation aux métiers maritimes et portuaires pour les jeunes de l'île.</p></article>
+          <article class="bento__item" data-reveal><img src="assets/img/fete-de-la-mer-regate-sm.webp" alt="" loading="lazy"><h3>Festival des arts côtiers</h3></article>
+          <article class="bento__item" data-reveal><img src="assets/img/journee-ville-propre-sm.webp" alt="" loading="lazy"><h3>Opération « Ville propre »</h3></article>
+          <article class="bento__item" data-reveal><img src="assets/img/aire-de-jeux-littoral-sm.webp" alt="" loading="lazy"><h3>Aires de jeux de quartier</h3></article>
+          <article class="bento__item" data-reveal><img src="assets/img/atelier-participatif-sm.webp" alt="" loading="lazy"><h3>Caravane municipale de santé</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Budget -->
+    <section class="section section--navy" id="budget">
+      <div class="container">
+        <div class="budget">
+          <div class="donut" data-reveal="scale">
+            <svg viewBox="0 0 200 200" id="donut"></svg>
+            <div class="donut__center"><strong id="donut-val">28,4 Md</strong><span id="donut-lbl">FCFA de budget d'investissement 2026</span></div>
+          </div>
+          <div>
+            <span class="eyebrow eyebrow--light" data-reveal>Budget 2026</span>
+            <h2 class="h2" data-split style="margin:1rem 0 1.5rem">Le budget au service <em class="accent">des actions</em></h2>
+            <div class="legend" id="legend" data-reveal></div>
+            <a class="link link--light" style="margin-top:1.5rem" href="mairie.html#transparence" data-reveal>Délibérations budgétaires complètes <svg class="i"><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>
+        <div class="commit">
+          <div data-reveal><svg class="i"><use href="#i-eye"/></svg><h4>100 % des fonds tracés</h4><p>Chaque projet affiche son budget et son avancement publiquement.</p></div>
+          <div data-reveal><svg class="i"><use href="#i-waves"/></svg><h4>Priorité à la résilience côtière</h4><p>Un effort massif contre l'érosion et les inondations.</p></div>
+          <div data-reveal><svg class="i"><use href="#i-users"/></svg><h4>Audit citoyen trimestriel</h4><p>Un comité d'habitants examine l'exécution du budget.</p></div>
+        </div>
+        <p class="note-provisoire" style="margin-top:2rem"><svg class="i i--sm"><use href="#i-info"/></svg>Montants fictifs — à remplacer par le budget voté</p>
+      </div>
+    </section>
+
+    <!-- Participer -->
+    <section class="section" id="participer">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Participer</span>
+            <h2 class="h2" data-split>Participez à l'action <em class="accent">municipale</em></h2>
+          </div>
+        </div>
+        <div class="act-grid">
+          <article class="act act--navy" data-reveal><span class="act__icon"><svg class="i"><use href="#i-alert"/></svg></span><h3>Signaler une anomalie</h3><p>Voirie, éclairage, déchets : photo et position GPS en deux minutes.</p><a class="act__go" href="contact.html#signaler">Signaler <svg class="i"><use href="#i-arrow-right"/></svg></a></article>
+          <article class="act act--ocean" data-reveal><span class="act__icon"><svg class="i"><use href="#i-lightbulb"/></svg></span><h3>Proposer un projet de quartier</h3><p>Déposez votre idée pour le prochain budget participatif.</p><a class="act__go" href="contact.html?objet=projet#ecrire">Déposer une idée <svg class="i"><use href="#i-arrow-right"/></svg></a></article>
+          <article class="act act--sand" data-reveal><span class="act__icon"><svg class="i"><use href="#i-heart"/></svg></span><h3>Réseau de bénévoles</h3><p>Rejoignez les journées citoyennes et les événements de la ville.</p><a class="act__go" href="contact.html?objet=benevole#ecrire">Rejoindre <svg class="i"><use href="#i-arrow-right"/></svg></a></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/vendor/leaflet.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/pages/actions.js"></script>
+  <script src="assets/js/anim.js"></script>
+</body>
+</html>

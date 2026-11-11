@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services & démarches — Mairie de Port-Gentil</title>
+  <meta name="description" content="Toutes les démarches de la Mairie de Port-Gentil : état civil, urbanisme, fiscalité locale, action sociale. Pièces à fournir, délais et demandes en ligne.">
+  <meta name="theme-color" content="#0a1c36">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>!function(h){h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('anim');setTimeout(function(){if(!window.PG_READY)h.classList.remove('anim')},3000)}}(document.documentElement)</script>
+</head>
+<body data-page="services" data-header="transparent">
+  <div class="curtain" aria-hidden="true"><svg class="curtain__logo" viewBox="0 0 64 64"><use href="#emblem"/></svg></div>
+  <div id="site-top"></div>
+
+  <main id="main">
+    <section class="page-hero" data-hero>
+      <div class="page-hero__media" data-hero-media><img src="assets/img/guichet-accueil-services.webp" alt=""></div>
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane" data-hero-item><a href="index.html">Accueil</a><svg class="i"><use href="#i-chevron-right"/></svg><span aria-current="page">Services</span></nav>
+        <span class="eyebrow eyebrow--light" data-hero-item>Guichet citoyen</span>
+        <h1 data-split style="margin-top:1rem">Vos services municipaux, <em class="accent" style="color:var(--gold-300)">simplement</em>.</h1>
+        <form class="page-hero__search" id="svc-search" role="search" data-hero-item>
+          <svg class="i"><use href="#i-search"/></svg>
+          <input type="search" placeholder="Que souhaitez-vous faire ? (ex. acte de naissance)" aria-label="Rechercher une démarche">
+          <button class="btn btn--sm" type="submit">Rechercher</button>
+        </form>
+        <div class="page-hero__chips" data-hero-item><span>Recherches fréquentes :</span>
+          <a href="demarche.html?id=acte-naissance">Acte de naissance</a><a href="demarche.html?id=certificat-residence">Certificat de résidence</a><a href="demarche.html?id=mariage">Mariage</a><a href="demarche.html?id=patente">Patente</a>
+        </div>
+      </div>
+    </section>
+
+    <nav class="subnav" aria-label="Dans cette page">
+      <div class="container"><div class="subnav__list">
+        <a class="subnav__link" href="#frequentes"><small>01</small>Démarches fréquentes</a>
+        <a class="subnav__link" href="#parcours"><small>02</small>Par situation de vie</a>
+        <a class="subnav__link" href="#catalogue"><small>03</small>Tous les services</a>
+        <a class="subnav__link" href="#en-ligne"><small>04</small>En ligne</a>
+        <a class="subnav__link" href="#pratique"><small>05</small>Infos pratiques</a>
+        <a class="subnav__link" href="#aide"><small>06</small>Aide</a>
+      </div></div>
+    </nav>
+
+    <!-- Fréquentes -->
+    <section class="section" id="frequentes">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Les plus demandées</span>
+            <h2 class="h2" data-split>Les démarches <em class="accent">du quotidien</em></h2>
+          </div>
+          <p class="muted" style="max-width:36ch" data-reveal>Pièces à fournir, délais, coût et lieu de dépôt : tout ce qu'il faut savoir avant de vous déplacer.</p>
+        </div>
+        <div class="quick-grid" id="freq-grid"></div>
+      </div>
+    </section>
+
+    <!-- Parcours de vie -->
+    <section class="section section--alt" id="parcours">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Par situation de vie</span>
+            <h2 class="h2" data-split>Un événement dans votre vie ? <em class="accent">On vous guide.</em></h2>
+          </div>
+        </div>
+        <div class="life" data-reveal>
+          <div class="life__list" role="tablist" aria-label="Situations de vie" id="life-list"></div>
+          <div class="life__panel" id="life-panel" role="tabpanel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalogue -->
+    <section class="section" id="catalogue">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Catalogue</span>
+            <h2 class="h2" data-split>Tous les services <em class="accent">municipaux</em></h2>
+          </div>
+        </div>
+        <div class="catalog">
+          <div class="catalog__nav" role="tablist" aria-label="Catégories de services" id="cat-nav" data-reveal></div>
+          <div data-reveal>
+            <div class="catalog__head">
+              <h3 id="cat-title">État civil</h3>
+              <label class="switch"><input type="checkbox" id="only-online"><span class="switch__track"></span>Uniquement en ligne</label>
+            </div>
+            <div class="catalog__list" id="cat-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- En ligne -->
+    <section class="section section--navy" id="en-ligne">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow eyebrow--light" data-reveal>E-Démarches</span>
+            <h2 class="h2" data-split>Vos démarches <em class="accent">100 % en ligne</em>, 24 h/24</h2>
+            <p class="lead" style="color:#b9c7d8" data-reveal>Plus besoin de faire la queue : faites votre demande depuis votre téléphone et suivez-la en temps réel.</p>
+          </div>
+        </div>
+        <div class="online">
+          <div class="online__card" data-reveal><span class="online__num">01</span><svg class="i"><use href="#i-file"/></svg><h3>Demander un document</h3><p>Actes d'état civil, certificats de résidence et de célibat, sans vous déplacer.</p></div>
+          <div class="online__card" data-reveal><span class="online__num">02</span><svg class="i"><use href="#i-calendar"/></svg><h3>Prendre rendez-vous</h3><p>Choisissez votre créneau au guichet ou lors des permanences des élus.</p></div>
+          <div class="online__card" data-reveal><span class="online__num">03</span><svg class="i"><use href="#i-bell"/></svg><h3>Suivre votre dossier</h3><p>Recevez une notification par SMS ou e-mail à chaque étape de traitement.</p></div>
+        </div>
+        <div class="tracker" data-reveal>
+          <div>
+            <span class="eyebrow">Suivi express</span>
+            <h3 style="margin-top:.8rem">Où en est mon dossier ?</h3>
+            <p class="muted" style="margin-top:.5rem">Saisissez le numéro reçu lors de votre demande (ex. PG-2026-48213).</p>
+            <form id="track-form"><input class="input" placeholder="PG-2026-00000" aria-label="Numéro de dossier" required><button class="btn btn--accent" type="submit">Vérifier</button></form>
+          </div>
+          <div class="timeline-status" id="track-result">
+            <div class="ts is-done"><span class="ts__dot"><svg class="i"><use href="#i-check"/></svg></span><div><strong>Demande reçue</strong><span>Exemple de suivi</span></div></div>
+            <div class="ts is-done"><span class="ts__dot"><svg class="i"><use href="#i-check"/></svg></span><div><strong>Pièces vérifiées</strong><span>Par le service de l'état civil</span></div></div>
+            <div class="ts is-current"><span class="ts__dot"><svg class="i"><use href="#i-clock"/></svg></span><div><strong>Document en préparation</strong><span>Signature en cours</span></div></div>
+            <div class="ts"><span class="ts__dot"><svg class="i"><use href="#i-check"/></svg></span><div><strong>Disponible au guichet</strong><span>Vous serez prévenu par SMS</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infos pratiques -->
+    <section class="section" id="pratique">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Infos pratiques</span>
+            <h2 class="h2" data-split>Venir en mairie</h2>
+          </div>
+          <a class="link" href="contact.html#plan" data-reveal>Plan d'accès <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="practical" style="margin-bottom:1.25rem">
+          <div class="practical__card" data-reveal>
+            <h3><svg class="i"><use href="#i-landmark"/></svg>Hôtel de Ville</h3>
+            <ul class="hours" id="hours"></ul>
+          </div>
+          <div class="practical__card" data-reveal>
+            <h3><svg class="i"><use href="#i-clock"/></svg>Horaires par service</h3>
+            <ul class="hours">
+              <li><span>État civil</span><strong>7 h 30 – 15 h 00</strong></li>
+              <li><span>Urbanisme</span><strong>8 h 00 – 14 h 00</strong></li>
+              <li><span>Régie des marchés</span><strong>7 h 00 – 13 h 00</strong></li>
+              <li><span>Action sociale</span><strong>Sur rendez-vous</strong></li>
+            </ul>
+          </div>
+          <div class="practical__map" data-reveal>
+            <img src="assets/img/hotel-de-ville-facade-sm.webp" alt="Façade de l'Hôtel de Ville" loading="lazy">
+            <a class="btn btn--sm btn--white" href="contact.html#plan"><svg class="i"><use href="#i-map-pin"/></svg>Itinéraire</a>
+          </div>
+        </div>
+        <div class="arr-grid" id="arr-grid"></div>
+      </div>
+    </section>
+
+    <!-- Aide -->
+    <section class="section section--alt" id="aide">
+      <div class="container split" style="align-items:start">
+        <div>
+          <span class="eyebrow" data-reveal>Aide</span>
+          <h2 class="h2" data-split style="margin-top:1rem">Questions <em class="accent">fréquentes</em></h2>
+          <p class="lead" style="margin-top:1rem" data-reveal>Vous ne trouvez pas votre réponse ? Nos agents vous accompagnent, y compris si vous n'avez pas accès à Internet.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem" data-reveal>
+            <a class="btn" href="contact.html"><svg class="i"><use href="#i-mail"/></svg>Écrire aux services</a>
+            <a class="btn btn--ghost" href="tel:+24111552024"><svg class="i"><use href="#i-phone"/></svg>Appeler le standard</a>
+          </div>
+        </div>
+        <div class="accordion" data-acc-single id="faq" data-reveal></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-bottom"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/pages/services.js"></script>
+  <script src="assets/js/anim.js"></script>
+</body>
+</html>

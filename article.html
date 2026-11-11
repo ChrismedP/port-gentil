@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article — Mairie de Port-Gentil</title>
+  <meta name="description" content="Actualité de la Mairie de Port-Gentil.">
+  <meta name="theme-color" content="#0a1c36">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>!function(h){h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('anim');setTimeout(function(){if(!window.PG_READY)h.classList.remove('anim')},3000)}}(document.documentElement)</script>
+</head>
+<body data-page="actualites">
+  <div class="curtain" aria-hidden="true"><svg class="curtain__logo" viewBox="0 0 64 64"><use href="#emblem"/></svg></div>
+  <div class="read-progress" aria-hidden="true"><span id="read-bar"></span></div>
+  <div id="site-top"></div>
+
+  <main id="main">
+    <article>
+      <header class="container container--narrow art-head" data-hero>
+        <nav class="breadcrumb breadcrumb--dark" aria-label="Fil d'Ariane" data-hero-item>
+          <a href="index.html">Accueil</a><svg class="i"><use href="#i-chevron-right"/></svg><a href="actualites.html">Actualités</a><svg class="i"><use href="#i-chevron-right"/></svg><span id="art-cat-crumb">Article</span>
+        </nav>
+        <div data-hero-item><span class="tag" id="art-cat">Catégorie</span></div>
+        <h1 id="art-title" data-split>Titre</h1>
+        <div class="art-meta" data-hero-item>
+          <div class="art-author"><svg class="brand__mark" viewBox="0 0 64 64"><use href="#emblem"/></svg><div><strong>Service communication</strong><span id="art-date">Date</span></div></div>
+          <div class="share">
+            <a class="icon-btn" id="share-fb" href="#" target="_blank" rel="noopener" aria-label="Partager sur Facebook"><svg class="i"><use href="#i-facebook"/></svg></a>
+            <a class="icon-btn" id="share-wa" href="#" target="_blank" rel="noopener" aria-label="Partager sur WhatsApp"><svg class="i"><use href="#i-whatsapp"/></svg></a>
+            <button class="icon-btn" type="button" id="share-link" aria-label="Copier le lien"><svg class="i"><use href="#i-link"/></svg></button>
+            <button class="icon-btn" type="button" onclick="window.print()" aria-label="Imprimer"><svg class="i"><use href="#i-printer"/></svg></button>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <figure style="margin:0">
+          <div class="art-cover" data-reveal="clip"><img id="art-img" src="" alt=""></div>
+          <figcaption class="art-caption" id="art-caption"></figcaption>
+        </figure>
+        <div class="art-layout">
+          <div class="prose" id="art-body"></div>
+          <aside class="aside-sticky" id="art-aside"></aside>
+        </div>
+      </div>
+    </article>
+
+    <section class="section section--tight">
+      <div class="container"><nav class="prevnext" id="prevnext" aria-label="Articles précédent et suivant"></nav></div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>À lire aussi</span>
+            <h2 class="h2" data-split>Dans la même <em class="accent">thématique</em></h2>
+          </div>
+          <a class="link" href="actualites.html#flux" data-reveal>Toutes les actualités <svg class="i"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <div class="grid grid-3" id="related"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie"><img src="" alt=""></div>
+  <div id="site-bottom"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/pages/article.js"></script>
+  <script src="assets/js/anim.js"></script>
+</body>
+</html>
